@@ -160,10 +160,8 @@ body {
 \*-----------------------------------*/
 
 
-.search-wrapper::before {
-  position: absolute;
-  top: 1.4rem;
-  right: 1.2rem;
+.search-wrapper::before,
+.load-more::before {
   content: "";
   width: 2rem;
   width: 2rem;
@@ -174,7 +172,27 @@ body {
   display: none;
 }
 
+.search-wrapper::before {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.2rem;
+}
+
 .search-wrapper.searching::before {
+  display: block;
+}
+
+.load-more {
+  background-color: var(--primary-variant);
+  margin-inline: auto;
+  margin-block: 3.6rem 6rem;
+}
+
+.load-more:is(:hover, :focus-visible) {
+  --primary-variant :hsla(350, 67%, 39%, 1);
+}
+
+.load-more.loading::before {
   display: block;
 }
 
@@ -756,7 +774,20 @@ body {
   #MOVIE LIST PAGE
 \*-----------------------------------*/
 
+.genre-list .title-wrapper {
+  margin-block-end: 5.6rem;
+}
 
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  column-gap: 1.6rem;
+  row-gap: 2rem;
+}
+
+.genre-list :is(.movie-card, .card-banner) {
+  width: 100%;
+}
 
 
 
