@@ -214,6 +214,14 @@ body {
   object-fit: cover;
 }
 
+.meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+}
+
 .meta-item {
   display: flex;
   align-items: center;
@@ -257,6 +265,43 @@ body {
   border-radius: var(--radius-16);
   overflow: hidden;
 }
+
+.title-wrapper {
+  margin-block-end: 2.4rem;
+}
+
+.slider-list {
+  margin-inline: -2rem;
+  overflow-x: overlay;
+  padding-block-end: 1.6rem;
+  margin-block-end: -1.6rem;
+}
+
+.slider-list::-webkit-scrollbar-thumb{
+  background-color: transparent;
+}
+
+.slider-list:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+  background-color: var(--banner-background);
+}
+
+.slider-list::-webkit-scrollbar-button {
+  width: 2rem;
+}
+
+.slider-list .slider-inner {
+  position: relative;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.slider-list .slider-inner::before,
+.slider-list .slider-inner::after {
+  content: '';
+  min-height: .4rem;
+}
+
+
 
 
 /*-----------------------------------*\
@@ -547,14 +592,6 @@ body {
   margin-block-end: 1.6rem;
 }
 
-.meta-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.2rem;
-}
-
 .banner .genre {
   margin-block: 1.2rem;
 }
@@ -608,6 +645,40 @@ body {
 .slider-control .active {
   filter: brightness(1);
   box-shadow: var(--shadow-1);
+}
+
+/**
+ * MOVIE LIST
+ */
+
+.movie-list {
+  padding-block-start: 3.2rem;
+} 
+
+.movie-card {
+  position: relative;
+  min-width: 20rem;
+}
+
+.movie-card .card-banner {
+  width: 100%;
+}
+
+.movie-card .title {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-block: .8rem .4rem;
+}
+
+.movie-card  .meta-list {
+  justify-content: space-between;
+}
+
+.movie-card .card-btn {
+  position: absolute;
+  inset: 0;
 }
 
 /*-----------------------------------*\
