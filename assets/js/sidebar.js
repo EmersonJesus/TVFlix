@@ -3,6 +3,7 @@
 import {api_key, fetchDataFromServer} from "./api.js"
 
 export function sidebar() {
+    
     const genreList = {}
 
     fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`, function ({ genres }) {

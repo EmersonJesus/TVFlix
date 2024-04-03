@@ -1,449 +1,106 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TvFlix</title>
-    <meta name="title" content="TvFlix">
-    <meta name="description" content="TvFlix is a popular movie app">
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/global.js" defer></script>
-    <script src="/assets/js/index.js" type="module"></script>
-</head>
-<body>
-    <header class="header">
-        <a href="/index.html" class="logo">
-            <img src="./assets/images/logo.svg" width="140" height="32" alt="tvflix home">
-        </a>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TvFlix</title>
+		<meta name="title" content="TvFlix" />
+		<meta
+			name="description"
+			content="Tvflix is a popular movie app made by Chetan."
+		/>
 
-        <div class="search-box" search-box>
-            <div class="search-wrapper"  search-wrapper>
-                <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..." autocomplete="off" class="search-field" search-field>
-                <img src="/assets/images/search.png" width="24" height="24" alt="search" class="leading-icon">
-            </div>
+		<!-- * FAVICON * -->
+		<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
-            <button class="search-btn" search-toggler>
-                <img src="/assets/images/close.png" width="24" height="24" alt="close search box">
-            </button>
-        </div>
+		<!-- * GOOGLE FONTS LINK -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 
-        <button class="search-btn"  search-toggler menu-close>
-            <img src="/assets/images/search.png" width="24" height="24" alt="open search box">
-        </button>
+		<!-- * CUSTOM CSS LINK -->
+		<link rel="stylesheet" href="./assets/css/style.css" />
 
-        <button class="menu-btn" menu-btn menu-toggler>
-            <img src="/assets/images/menu.png" width="24"  height="24" alt="open menu" class="menu">
-            <img src="/assets/images/close.png" width="24" height="24" alt="close menu" class="close">
-        </button>
-    </header>
+		<!-- * CUSTOM JS LINK -->
+		<script src="./assets/js/global.js" defer></script>
+		<script src="./assets/js/index.js" type="module"></script>
+	</head>
+	<body>
+		<!-- ! HEADER -->
+		<header class="header">
+			<a href="./index.html" class="logo">
+				<img
+					src="./assets/images/logo.svg"
+					width="140"
+					height="32"
+					alt="TvFlix home"
+				/>
+			</a>
+			<div class="search-box" search-box>
+				<div class="search-wrapper" search-wrapper>
+					<input
+						type="text"
+						name="search"
+						placeholder="Search any movies..."
+						aria-label="search movies"
+						class="search-field"
+						autocomplete="off"
+						search-field
+					/>
+					<img
+						src="./assets/images/search.png"
+						width="24"
+						height="24"
+						alt="search"
+						class="leading-icon"
+					/>
+				</div>
 
-    <nav class="sidebar" sidebar></nav>
-    <div class="overlay" overlay menu-toggler></div>
+				<button class="search-btn" search-toggler>
+					<img
+						src="./assets/images/close.png"
+						width="24"
+						height="24"
+						alt="close search box"
+					/>
+				</button>
+			</div>
 
-    <article class="container" page-content>
-        <section class="banner" aria-label="popular movies">
-            <div class="banner-slider">
-                <div class="slider-item active" slider-item>
-                    <img src="/assets/images/slider-banner.jpg" alt="Puss in Boots: The Last Wish" class="img-cover" loading="eager">
-                    <div class="banner-content">
-                        <h2 class="heading">
-                            Puss in Boots: The Last Wish
-                        </h2>
+			<button class="search-btn" search-toggler menu-close>
+				<img
+					src="./assets/images/search.png"
+					width="24"
+					height="24"
+					alt="open search box"
+				/>
+			</button>
+			<button class="menu-btn" menu-btn menu-toggler>
+				<img
+					src="./assets/images/menu.png"
+					width="24"
+					height="24"
+					alt="open menu"
+					class="menu"
+				/>
+				<img
+					src="./assets/images/menu-close.png"
+					width="24"
+					height="24"
+					alt="close menu"
+					class="close"
+				/>
+			</button>
+		</header>
 
-                        <div class="meta-list">
-                            <div class="meta-item">2022</div>
-                            <div class="meta-item card-badge">7.5</div>
-                        </div>
+		<main>
+			<!-- ! SIDEBAR -->
+			<nav class="sidebar" sidebar></nav>
+			<div class="overlay" overlay menu-toggler></div>
 
-                        <p class="genre">Animation, Action, Adventure</p>
-                        <p class="banner-text">
-                            Puss in Boots discovers that his passion for adventure 
-                            has taken its toll: He has burned through eight of
-                            his nine lives, leaving him with only one life left.
-                            Puss sets out on an epic journey to find the mythical
-                            Last Wish and restore his nine lives.
-                        </p>
-
-                        <a href="/detail.html" class="btn">
-                            <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                            <span class="span">Watch Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="slider-item active" slider-item>
-                    <img src="/assets/images/slider-banner.jpg" alt="Puss in Boots: The Last Wish" class="img-cover" loading="eager">
-                    <div class="banner-content">
-                        <h2 class="heading">
-                            Puss in Boots: The Last Wish
-                        </h2>
-
-                        <div class="meta-list">
-                            <div class="meta-item">2022</div>
-                            <div class="meta-item card-badge">7.5</div>
-                        </div>
-
-                        <p class="genre">Animation, Action, Adventure</p>
-                        <p class="banner-text">
-                            Puss in Boots discovers that his passion for adventure 
-                            has taken its toll: He has burned through eight of
-                            his nine lives, leaving him with only one life left.
-                            Puss sets out on an epic journey to find the mythical
-                            Last Wish and restore his nine lives.
-                        </p>
-
-                        <a href="/detail.html" class="btn">
-                            <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                            <span class="span">Watch Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="slider-item active" slider-item>
-                    <img src="/assets/images/slider-banner.jpg" alt="Puss in Boots: The Last Wish" class="img-cover" loading="eager">
-                    <div class="banner-content">
-                        <h2 class="heading">
-                            Puss in Boots: The Last Wish
-                        </h2>
-
-                        <div class="meta-list">
-                            <div class="meta-item">2022</div>
-                            <div class="meta-item card-badge">7.5</div>
-                        </div>
-
-                        <p class="genre">Animation, Action, Adventure</p>
-                        <p class="banner-text">
-                            Puss in Boots discovers that his passion for adventure 
-                            has taken its toll: He has burned through eight of
-                            his nine lives, leaving him with only one life left.
-                            Puss sets out on an epic journey to find the mythical
-                            Last Wish and restore his nine lives.
-                        </p>
-
-                        <a href="/detail.html" class="btn">
-                            <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                            <span class="span">Watch Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="slider-item active" slider-item>
-                    <img src="/assets/images/slider-banner.jpg" alt="Puss in Boots: The Last Wish" class="img-cover" loading="eager">
-                    <div class="banner-content">
-                        <h2 class="heading">
-                            Puss in Boots: The Last Wish
-                        </h2>
-
-                        <div class="meta-list">
-                            <div class="meta-item">2022</div>
-                            <div class="meta-item card-badge">7.5</div>
-                        </div>
-
-                        <p class="genre">Animation, Action, Adventure</p>
-                        <p class="banner-text">
-                            Puss in Boots discovers that his passion for adventure 
-                            has taken its toll: He has burned through eight of
-                            his nine lives, leaving him with only one life left.
-                            Puss sets out on an epic journey to find the mythical
-                            Last Wish and restore his nine lives.
-                        </p>
-
-                        <a href="/detail.html" class="btn">
-                            <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                            <span class="span">Watch Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="slider-item active" slider-item>
-                    <img src="/assets/images/slider-banner.jpg" alt="Puss in Boots: The Last Wish" class="img-cover" loading="eager">
-                    <div class="banner-content">
-                        <h2 class="heading">
-                            Puss in Boots: The Last Wish
-                        </h2>
-
-                        <div class="meta-list">
-                            <div class="meta-item">2022</div>
-                            <div class="meta-item card-badge">7.5</div>
-                        </div>
-
-                        <p class="genre">Animation, Action, Adventure</p>
-                        <p class="banner-text">
-                            Puss in Boots discovers that his passion for adventure 
-                            has taken its toll: He has burned through eight of
-                            his nine lives, leaving him with only one life left.
-                            Puss sets out on an epic journey to find the mythical
-                            Last Wish and restore his nine lives.
-                        </p>
-
-                        <a href="/detail.html" class="btn">
-                            <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                            <span class="span">Watch Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="slider-item active" slider-item>
-                    <img src="/assets/images/slider-banner.jpg" alt="Puss in Boots: The Last Wish" class="img-cover" loading="eager">
-                    <div class="banner-content">
-                        <h2 class="heading">
-                            Puss in Boots: The Last Wish
-                        </h2>
-
-                        <div class="meta-list">
-                            <div class="meta-item">2022</div>
-                            <div class="meta-item card-badge">7.5</div>
-                        </div>
-
-                        <p class="genre">Animation, Action, Adventure</p>
-                        <p class="banner-text">
-                            Puss in Boots discovers that his passion for adventure 
-                            has taken its toll: He has burned through eight of
-                            his nine lives, leaving him with only one life left.
-                            Puss sets out on an epic journey to find the mythical
-                            Last Wish and restore his nine lives.
-                        </p>
-
-                        <a href="/detail.html" class="btn">
-                            <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                            <span class="span">Watch Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="slider-item active" slider-item>
-                    <img src="/assets/images/slider-banner.jpg" alt="Puss in Boots: The Last Wish" class="img-cover" loading="eager">
-                    <div class="banner-content">
-                        <h2 class="heading">
-                            Puss in Boots: The Last Wish
-                        </h2>
-
-                        <div class="meta-list">
-                            <div class="meta-item">2022</div>
-                            <div class="meta-item card-badge">7.5</div>
-                        </div>
-
-                        <p class="genre">Animation, Action, Adventure</p>
-                        <p class="banner-text">
-                            Puss in Boots discovers that his passion for adventure 
-                            has taken its toll: He has burned through eight of
-                            his nine lives, leaving him with only one life left.
-                            Puss sets out on an epic journey to find the mythical
-                            Last Wish and restore his nine lives.
-                        </p>
-
-                        <a href="/detail.html" class="btn">
-                            <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                            <span class="span">Watch Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="slider-item active" slider-item>
-                    <img src="/assets/images/slider-banner.jpg" alt="Puss in Boots: The Last Wish" class="img-cover" loading="eager">
-                    <div class="banner-content">
-                        <h2 class="heading">
-                            Puss in Boots: The Last Wish
-                        </h2>
-
-                        <div class="meta-list">
-                            <div class="meta-item">2022</div>
-                            <div class="meta-item card-badge">7.5</div>
-                        </div>
-
-                        <p class="genre">Animation, Action, Adventure</p>
-                        <p class="banner-text">
-                            Puss in Boots discovers that his passion for adventure 
-                            has taken its toll: He has burned through eight of
-                            his nine lives, leaving him with only one life left.
-                            Puss sets out on an epic journey to find the mythical
-                            Last Wish and restore his nine lives.
-                        </p>
-
-                        <a href="/detail.html" class="btn">
-                            <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                            <span class="span">Watch Now</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slider-control">
-                <div class="control-inner">
-
-                    <button class="poster-box slider-item active">
-                        <img src="/assets/images/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy" draggable="false" class="img-cover">
-                    </button>
-                    <button class="poster-box slider-item">
-                        <img src="/assets/images/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy" draggable="false" class="img-cover">
-                    </button>
-                    <button class="poster-box slider-item">
-                        <img src="/assets/images/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy" draggable="false" class="img-cover">
-                    </button>
-                    <button class="poster-box slider-item">
-                        <img src="/assets/images/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy" draggable="false" class="img-cover">
-                    </button>
-                    <button class="poster-box slider-item">
-                        <img src="/assets/images/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy" draggable="false" class="img-cover">
-                    </button>
-                    <button class="poster-box slider-item">
-                        <img src="/assets/images/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy" draggable="false" class="img-cover">
-                    </button>
-                    <button class="poster-box slider-item">
-                        <img src="/assets/images/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy" draggable="false" class="img-cover">
-                    </button>
-                    <button class="poster-box slider-item">
-                        <img src="/assets/images/slider-control.jpg" alt="Slide to Puss in Boots: The Last Wish" loading="lazy" draggable="false" class="img-cover">
-                    </button>
-
-                </div>
-            </div>
-            
-        </section>
-
-        <section class="movie-list" aria-label="upcoming movie">
-            <div class="title-wrapper">
-                <h3 class="title-large">Upcoming Movies</h3>
-            </div>
-
-            <div class="slider-list">
-                <div class="slider-inner">
-                    <div class="movie-card">
-                        <figure class="poster-box card-banner">
-                            <img src="/assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
-                        </figure>
-
-                        <h4 class="title">Puss in Boots: The Last Wish</h4>
-                        <div class="meta-list">
-                            <div class="meta-item">
-                                <img src="/assets/images/star.png" width="24" height="24" loading="lazy" alt="rating">
-                                <span class="span">8.4</span>
-                            </div>
-
-                            <div class="card-badge">2022</div>
-                        </div>
-
-                        <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-                    </div>
-                    <div class="movie-card">
-                        <figure class="poster-box card-banner">
-                            <img src="/assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
-                        </figure>
-
-                        <h4 class="title">Puss in Boots: The Last Wish</h4>
-                        <div class="meta-list">
-                            <div class="meta-item">
-                                <img src="/assets/images/star.png" width="24" height="24" loading="lazy" alt="rating">
-                                <span class="span">8.4</span>
-                            </div>
-
-                            <div class="card-badge">2022</div>
-                        </div>
-
-                        <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-                    </div>
-                    <div class="movie-card">
-                        <figure class="poster-box card-banner">
-                            <img src="/assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
-                        </figure>
-
-                        <h4 class="title">Puss in Boots: The Last Wish</h4>
-                        <div class="meta-list">
-                            <div class="meta-item">
-                                <img src="/assets/images/star.png" width="24" height="24" loading="lazy" alt="rating">
-                                <span class="span">8.4</span>
-                            </div>
-
-                            <div class="card-badge">2022</div>
-                        </div>
-
-                        <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-                    </div>
-                    <div class="movie-card">
-                        <figure class="poster-box card-banner">
-                            <img src="/assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
-                        </figure>
-
-                        <h4 class="title">Puss in Boots: The Last Wish</h4>
-                        <div class="meta-list">
-                            <div class="meta-item">
-                                <img src="/assets/images/star.png" width="24" height="24" loading="lazy" alt="rating">
-                                <span class="span">8.4</span>
-                            </div>
-
-                            <div class="card-badge">2022</div>
-                        </div>
-
-                        <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-                    </div>
-                    <div class="movie-card">
-                        <figure class="poster-box card-banner">
-                            <img src="/assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
-                        </figure>
-
-                        <h4 class="title">Puss in Boots: The Last Wish</h4>
-                        <div class="meta-list">
-                            <div class="meta-item">
-                                <img src="/assets/images/star.png" width="24" height="24" loading="lazy" alt="rating">
-                                <span class="span">8.4</span>
-                            </div>
-
-                            <div class="card-badge">2022</div>
-                        </div>
-
-                        <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-                    </div>
-                    <div class="movie-card">
-                        <figure class="poster-box card-banner">
-                            <img src="/assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
-                        </figure>
-
-                        <h4 class="title">Puss in Boots: The Last Wish</h4>
-                        <div class="meta-list">
-                            <div class="meta-item">
-                                <img src="/assets/images/star.png" width="24" height="24" loading="lazy" alt="rating">
-                                <span class="span">8.4</span>
-                            </div>
-
-                            <div class="card-badge">2022</div>
-                        </div>
-
-                        <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-                    </div>
-                    <div class="movie-card">
-                        <figure class="poster-box card-banner">
-                            <img src="/assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
-                        </figure>
-
-                        <h4 class="title">Puss in Boots: The Last Wish</h4>
-                        <div class="meta-list">
-                            <div class="meta-item">
-                                <img src="/assets/images/star.png" width="24" height="24" loading="lazy" alt="rating">
-                                <span class="span">8.4</span>
-                            </div>
-
-                            <div class="card-badge">2022</div>
-                        </div>
-
-                        <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-                    </div>
-                    <div class="movie-card">
-                        <figure class="poster-box card-banner">
-                            <img src="/assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
-                        </figure>
-
-                        <h4 class="title">Puss in Boots: The Last Wish</h4>
-                        <div class="meta-list">
-                            <div class="meta-item">
-                                <img src="/assets/images/star.png" width="24" height="24" loading="lazy" alt="rating">
-                                <span class="span">8.4</span>
-                            </div>
-
-                            <div class="card-badge">2022</div>
-                        </div>
-
-                        <a href="./detail.html" class="card-btn" title="Puss in Boots: The Last Wish"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </article>
-</body>
+			<article class="container" page-content></article>
+		</main>
+	</body>
 </html>
