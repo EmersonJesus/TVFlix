@@ -163,9 +163,9 @@ body {
 .search-wrapper::before,
 .load-more::before {
   content: "";
-  width: 2rem;
-  width: 2rem;
-  border: .3rem solid var(--white);
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--white);
   border-radius: var(--radius-24);
   border-inline-end-color: transparent;
   animation: loading 500ms linear infinite;
