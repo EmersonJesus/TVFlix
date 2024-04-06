@@ -28,7 +28,7 @@ export function sidebar() {
             <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=es", "Spanish")'>Spanish</a>
             <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=fr", "French")'>French</a>
             <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=de", "German")'>German</a>
-            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=pt", "Portuguese (Brazilian)")'>Portuguese (Brazilian)</a>
+            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=pt", "Brazilian")'>Brazilian</a>
             <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ja", "Japanese")'>Japanese</a>
             <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ko", "Korean")'>Korean</a>
         </div>
