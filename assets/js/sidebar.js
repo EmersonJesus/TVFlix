@@ -34,7 +34,8 @@ export function sidebar() {
         </div>
 
         <div class="sidebar-footer">
-            <p class="copyright">Copyright 2023 <a href="https://youtube.com/@codewithsadee">codewithsadee</a></p>
+        <p class="copyright">Copyright 2024</p>
+        <a href="https://github.com/EmersonJesus" style="font-size:15px"><img src="https://img.icons8.com/ios-filled/25/ffffff/github.png" alt="github"/>EmersonJesus</a><br>
             <img src="/assets/images/tmdb-logo.svg" width="130" height="17" alt="the movie database logo">
         </div>
     `
