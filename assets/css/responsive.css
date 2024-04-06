@@ -20,7 +20,6 @@
   /* Responsive for larger than 575px screen */
   
   @media (min-width: 575px) {
-	/* Home Page */
 	.banner-content {
 	  right: auto;
 	  max-width: 500px;
@@ -30,7 +29,6 @@
 	  left: calc(100% - 400px);
 	}
   
-	/* Detail Page */
   
 	.detail-content {
 	  max-width: 750px;
@@ -40,17 +38,13 @@
   /* Responsive for larger than 768px screen */
   
   @media (min-width: 768px) {
-	/* custom property */
   
 	:root {
-	  /* gradient color */
 	  --banner-overlay: 90deg, hsl(220, 17%, 7%) 0%, hsla(220, 17%, 7%, 0) 100%;
   
-	  /* font size */
 	  --fs-heading: 5.4rem;
 	}
   
-	/* Home Page */
 	.container {
 	  padding-inline: 24px;
 	}
@@ -79,7 +73,6 @@
 	  left: 50px;
 	}
   
-	/* movie detail page */
 	.movie-detail {
 	  display: flex;
 	  align-items: flex-start;
@@ -108,7 +101,6 @@
   /* Responsive for larger than 1200px screen */
   
   @media (min-width: 1200px) {
-	/* home page */
 	.header {
 	  padding: 28px 56px;
 	}
@@ -157,7 +149,6 @@
 	  padding: 60px;
 	}
   
-	/* Movie Detail Page */
 	.backdrop-image {
 	  border-top-left-radius: var(--radius-36);
 	}

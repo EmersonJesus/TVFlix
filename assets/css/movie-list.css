@@ -1,3 +1,28 @@
+.movie-list {
+	padding-left: 32px;
+}
+.movie-card {
+	position: relative;
+	min-width: 200px;
+}
+.movie-card .card-banner {
+	width: 200px;
+}
+.movie-card .title {
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-block: 8px 4px;
+}
+.movie-card .meta-list {
+	justify-content: space-between;
+}
+.movie-card .card-btn {
+	position: absolute;
+	inset: 0;
+}
+
 .genre-list .title-wrapper {
 	margin-bottom: 56px;
 }
