@@ -136,7 +136,7 @@
 	}
   
 	.container {
-	  height: calc(100vh - 104px);
+	  height: calc(95vh - 104px);
 	  border-top-left-radius: var(--radius-36);
 	}
   
