@@ -128,20 +128,33 @@ const addHeroSlide = function()  {
 
     let lastSliderItem = sliderItems[0];
     let lastSliderControl = sliderControls[0];
+    let currentSliderIndex = 0;
 
     lastSliderItem.classList.add("active");
     lastSliderControl.classList.add("active");
 
-    const sliderStart = function() {
-        lastSliderItem.classList.remove("active");
-        lastSliderControl.classList.remove("active");
+    const sliderStart = function () {
+        const controlIndex = Number(this.getAttribute('slider-control'));
 
-        sliderItems[Number(this.getAttribute("slider-control"))].classList.add("active");
-        this.classList.add("active");
+        if (currentSliderIndex !== controlIndex) {
+            lastSliderItem.classList.remove('active');
+            lastSliderControl.classList.remove('active');
 
-        lastSliderItem  = sliderItems[Number(this.getAttribute("slider-control"))];
-        lastSliderControl = this;
-    };
+            sliderItems[controlIndex].classList.add('active');
+            this.classList.add('active');
+            lastSliderItem = sliderItems[controlIndex];
+            lastSliderControl = this;
+            currentSliderIndex = controlIndex;
+        }
+    }
+
+    const slideToNext = function () {
+        const nextIndex = (currentSliderIndex + 1) % sliderItems.length;
+        sliderControls[nextIndex].click();
+    }
+
+
+    setInterval(slideToNext, 7000);
 
     addEventOnElements(sliderControls, "click", sliderStart);
 };

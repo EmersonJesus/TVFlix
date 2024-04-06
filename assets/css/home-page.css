@@ -1,0 +1,130 @@
+@import url(variables.css);
+
+.container {
+	position: relative;
+	background-color: var(--surface);
+	color: var(--on-surface);
+	padding: 24px 20px 48px;
+	height: calc(100vh - 96px);
+	overflow-y: overlay;
+	z-index: 1;
+}
+
+/* ! BANNER */
+
+.banner {
+	position: relative;
+	height: 700px;
+	border-radius: var(--radius-24);
+	overflow: hidden;
+}
+.banner-slider .slider-item {
+	position: absolute;
+	top: 0;
+	left: 120%;
+	width: 100%;
+	height: 100%;
+	background-color: var(--banner-background);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity var(--transition-long);
+}
+.banner-slider .slider-item::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: linear-gradient(var(--banner-overlay));
+}
+.banner-slider .active {
+	left: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.banner-content {
+	position: absolute;
+	left: 24px;
+	right: 24px;
+	bottom: 206px;
+	z-index: 1;
+	color: var(--text-color);
+}
+.banner :is(.heading, .banner-text) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.banner .heading {
+	-webkit-line-clamp: 3;
+	margin-bottom: 16px;
+}
+.banner .genre {
+	margin: 12px 0;
+}
+.banner-text {
+	-webkit-line-clamp: 2;
+	margin-bottom: 24px;
+}
+.banner .btn {
+	background-color: var(--primary);
+}
+.banner .btn:is(:hover, :focus-visible) {
+	box-shadow: var(--shadow-2);
+}
+.slider-control {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	right: 0;
+	border-radius: var(--radius-16) 0 0 var(--radius-16);
+	user-select: none;
+	padding: 4px 0 4px 4px;
+	overflow-x: auto;
+}
+.slider-control::-webkit-scrollbar {
+	display: none;
+}
+.control-inner {
+	display: flex;
+	gap: 12px;
+}
+.control-inner::after {
+	content: "";
+	min-width: 12px;
+}
+.slider-control .slider-item {
+	width: 100px;
+	border-radius: var(--radius-8);
+	flex-shrink: 0;
+	filter: brightness(0.4);
+}
+.slider-control .active {
+	filter: brightness(1);
+	box-shadow: var(--shadow-1);
+}
+
+/* ! MOVIE LIST */
+
+.movie-list {
+	padding-left: 32px;
+}
+.movie-card {
+	position: relative;
+	min-width: 200px;
+}
+.movie-card .card-banner {
+	width: 200px;
+}
+.movie-card .title {
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-block: 8px 4px;
+}
+.movie-card .meta-list {
+	justify-content: space-between;
+}
+.movie-card .card-btn {
+	position: absolute;
+	inset: 0;
+}

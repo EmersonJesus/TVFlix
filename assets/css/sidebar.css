@@ -1,0 +1,84 @@
+@import url(variables.css);
+
+
+.sidebar {
+	position: absolute;
+	background-color: var(--background);
+	top: 96px;
+	bottom: 0;
+	left: -340px;
+	max-width: 340px;
+	width: 100%;
+	border-top: 1px solid var(--banner-background);
+	overflow-y: overlay;
+	z-index: 4;
+	visibility: hidden;
+	transition: var(--transition-long);
+}
+.sidebar.active {
+	transform: translateX(340px);
+	visibility: visible;
+}
+.sidebar-inner {
+	display: grid;
+	gap: 20px;
+	padding: 36px 0;
+}
+.sidebar::-webkit-scrollbar-thumb {
+	background-color: transparent;
+}
+.sidebar:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+	background-color: var(--banner-background);
+}
+.sidebar::-webkit-scrollbar-button {
+	height: 16px;
+}
+.sidebar-list,
+.sidebar-footer {
+	padding: 0 36px;
+}
+.sidebar-link {
+	color: var(--on-surface-variant);
+	transition: var(--transition-short);
+}
+.sidebar-link:is(:hover, :focus-visible) {
+	color: var(--on-background);
+}
+.sidebar-list {
+	display: grid;
+	gap: 8px;
+}
+.sidebar-list .title {
+	margin-bottom: 8px;
+}
+.sidebar-footer {
+	border-top: 1px solid var(--banner-background);
+	padding-top: 28px;
+	margin-top: 16px;
+}
+.copyright {
+	color: var(--on-surface-variant);
+	margin-bottom: 20px;
+}
+.copyright a {
+	display: inline-block;
+	transition: var(--transition-long);
+}
+.copyright a:hover {
+	color: var(--on-background);
+}
+.overlay {
+	position: fixed;
+	top: 96px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: var(--background);
+	opacity: 0;
+	pointer-events: none;
+	z-index: 3;
+}
+.overlay.active {
+	opacity: 0.5;
+	pointer-events: all;
+}

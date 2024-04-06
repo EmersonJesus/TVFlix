@@ -1,0 +1,22 @@
+@import url(variables.css);
+
+.search-modal {
+	position: fixed;
+	top: 96px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: var(--surface);
+	padding: 50px 24px;
+	overflow-y: overlay;
+	z-index: 4;
+	display: none;
+}
+.search-modal.active {
+	display: block;
+}
+.search-modal .label {
+	color: var(--primary-variant);
+	font-weight: var(--weight-bold);
+	margin-bottom: 8px;
+}
