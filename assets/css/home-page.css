@@ -8,17 +8,18 @@
 	height: calc(100vh - 96px);
 	overflow-y: overlay;
 	z-index: 1;
-}
-
-/* ! BANNER */
-
-.banner {
+  }
+  
+  /* Banner */
+  
+  .banner {
 	position: relative;
 	height: 700px;
 	border-radius: var(--radius-24);
 	overflow: hidden;
-}
-.banner-slider .slider-item {
+  }
+  
+  .banner-slider .slider-item {
 	position: absolute;
 	top: 0;
 	left: 120%;
@@ -28,49 +29,59 @@
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity var(--transition-long);
-}
-.banner-slider .slider-item::before {
+  }
+  
+  .banner-slider .slider-item::before {
 	content: "";
 	position: absolute;
 	inset: 0;
 	background-image: linear-gradient(var(--banner-overlay));
-}
-.banner-slider .active {
+  }
+  
+  .banner-slider .active {
 	left: 0;
 	opacity: 1;
 	visibility: visible;
-}
-.banner-content {
+  }
+  
+  .banner-content {
 	position: absolute;
 	left: 24px;
 	right: 24px;
 	bottom: 206px;
 	z-index: 1;
 	color: var(--text-color);
-}
-.banner :is(.heading, .banner-text) {
+  }
+  
+  .banner :is(.heading, .banner-text) {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
-}
-.banner .heading {
+  }
+  
+  .banner .heading {
 	-webkit-line-clamp: 3;
-	margin-bottom: 16px;
-}
-.banner .genre {
-	margin: 12px 0;
-}
-.banner-text {
+	margin-block-end: 16px;
+  }
+  
+  .banner .genre {
+	margin-block: 12px;
+  }
+  
+  .banner-text {
 	-webkit-line-clamp: 2;
-	margin-bottom: 24px;
-}
-.banner .btn {
+	margin-block-end: 24px;
+  }
+  
+  .banner .btn {
 	background-color: var(--primary);
-}
-.banner .btn:is(:hover, :focus-visible) {
+  }
+  
+  .banner .btn:is(:hover, :focus-visible) {
 	box-shadow: var(--shadow-2);
-}
-.slider-control {
+  }
+  
+  .slider-control {
 	position: absolute;
 	bottom: 20px;
 	left: 20px;
@@ -79,25 +90,36 @@
 	user-select: none;
 	padding: 4px 0 4px 4px;
 	overflow-x: auto;
-}
-.slider-control::-webkit-scrollbar {
+  }
+  
+  .slider-control::-webkit-scrollbar {
 	display: none;
-}
-.control-inner {
+  }
+  
+  .container-inner {
 	display: flex;
 	gap: 12px;
-}
-.control-inner::after {
+  }
+  
+  .control-inner {
+	display: flex;
+	gap: 10px;
+  }
+  
+  .control-inner::after {
 	content: "";
 	min-width: 12px;
-}
-.slider-control .slider-item {
+  }
+  
+  .slider-control .slider-item {
 	width: 100px;
 	border-radius: var(--radius-8);
 	flex-shrink: 0;
 	filter: brightness(0.4);
-}
-.slider-control .active {
+  }
+  
+  .slider-control .active {
 	filter: brightness(1);
 	box-shadow: var(--shadow-1);
-}
+  }
+  

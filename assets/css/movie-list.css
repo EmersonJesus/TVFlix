@@ -1,13 +1,16 @@
 .movie-list {
-	padding-left: 32px;
-}
+	padding-block-start: 32px;
+  }
+  
 .movie-card {
 	position: relative;
 	min-width: 200px;
 }
+  
 .movie-card .card-banner {
 	width: 200px;
 }
+  
 .movie-card .title {
 	width: 100%;
 	white-space: nowrap;
@@ -15,23 +18,27 @@
 	overflow: hidden;
 	margin-block: 8px 4px;
 }
+  
 .movie-card .meta-list {
 	justify-content: space-between;
 }
+  
 .movie-card .card-btn {
 	position: absolute;
 	inset: 0;
 }
 
 .genre-list .title-wrapper {
-	margin-bottom: 56px;
-}
-.grid-list {
+	margin-block-end: 56px;
+  }
+  
+  .grid-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-	row-gap: 20px;
 	column-gap: 16px;
-}
-:is(.genre-list, .search-modal) :is(.movie-card, .card-banner) {
+	row-gap: 20px;
+  }
+  
+  :is(.genre-list, .search-modal) :is(.movie-card, .card-banner) {
 	width: 100%;
-}
+  }

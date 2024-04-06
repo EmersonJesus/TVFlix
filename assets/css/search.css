@@ -11,12 +11,14 @@
 	overflow-y: overlay;
 	z-index: 4;
 	display: none;
-}
-.search-modal.active {
+  }
+  
+  .search-modal.active {
 	display: block;
-}
-.search-modal .label {
+  }
+  
+  .search-modal .label {
 	color: var(--primary-variant);
 	font-weight: var(--weight-bold);
-	margin-bottom: 8px;
-}
+	margin-block-end: 8px;
+  }

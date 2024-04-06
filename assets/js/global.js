@@ -1,5 +1,7 @@
 "use strict";
 
+document.body.style.overflow = "hidden";
+
 // Add event on multiple elements
 
 const addEventOnElements = function (elements, eventType, callback) {
