@@ -154,7 +154,7 @@ const addHeroSlide = function()  {
     }
 
 
-    setInterval(slideToNext, 7000);
+    setInterval(slideToNext, 10000);
 
     addEventOnElements(sliderControls, "click", sliderStart);
 };

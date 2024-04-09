@@ -103,7 +103,7 @@
   
   .control-inner {
 	display: flex;
-	gap: 10px;
+	gap: 14px;
   }
   
   .control-inner::after {
@@ -117,8 +117,14 @@
 	flex-shrink: 0;
 	filter: brightness(0.4);
   }
+
+  .slider-control .slider-item:hover {
+	transform: scale(1.08);
+	filter: brightness(1);
+  }
   
   .slider-control .active {
+	transform: scale(1.08);
 	filter: brightness(1);
 	box-shadow: var(--shadow-1);
   }
