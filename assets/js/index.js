@@ -11,15 +11,15 @@ sidebar();
 
 const homePageSections = [
     {
-        title: "Upcoming Movies",
+        title: "Próximos lançamentos",
         path: "/movie/upcoming"
     },
     {
-        title: "This Week Trending Movies",
+        title: "Popular essa semana",
         path: "/trending/movie/week"
     },
     {
-        title: "Top Rated Movies",
+        title: "Filmes mais bem avaliados",
         path: "/movie/top_rated"
     }
 ]
@@ -36,12 +36,12 @@ const genreList = {
     }
 };
 
-fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`, function ({ genres }) {
+fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}&language=pt-BR`, function ({ genres }) {
     for (const {id, name} of genres) {
         genreList[id] = name;
     }
 
-    fetchDataFromServer(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&page=1`, heroBanner);
+    fetchDataFromServer(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&page=1&language=pt-BR`, heroBanner);
 });
 
 const heroBanner = function({ results:  movieList }) {
@@ -93,7 +93,7 @@ const heroBanner = function({ results:  movieList }) {
 
                 <a href="/detail.html" class="btn" onclick="getMovieDetail(${id})">
                     <img src="/assets/images/play_circle.png" width="24" height="24" aria-hidden="true" alt="play circle">
-                    <span class="span">Watch Now</span>
+                    <span class="span">Assistir Agora</span>
                 </a>
             </div>
         `;
@@ -118,7 +118,7 @@ const heroBanner = function({ results:  movieList }) {
     addHeroSlide();
 
     for (const{title, path} of homePageSections) {
-        fetchDataFromServer(`https://api.themoviedb.org/3${path}?api_key=${api_key}&page=1`, createMovieList, title);
+        fetchDataFromServer(`https://api.themoviedb.org/3${path}?api_key=${api_key}&page=1&language=pt-BR`, createMovieList, title);
     }
 };
 

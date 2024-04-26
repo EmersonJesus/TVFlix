@@ -43,7 +43,7 @@ const filterVideos = function(videoList)  {
 }
 
 fetchDataFromServer(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&append_to_response=casts,videos,images,releases`,
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&append_to_response=casts,videos,images,releases&language=pt-BR`,
     function(movie) {
 
         const  {
@@ -93,13 +93,13 @@ fetchDataFromServer(
 
                             <ul class="details-list">
                                 <div class="list-item">
-                                    <p class="list-name">Starring</p>
+                                    <p class="list-name">Estrelando</p>
 
                                     <p>${getCasts(cast)}</p>
                                 </div>
 
                                 <div class="list-item">
-                                    <p class="list-name">Directed By</p>
+                                    <p class="list-name">Dirigido por</p>
 
                                     <p>${getDirector(crew)}</p>
                                 </div>
@@ -108,7 +108,7 @@ fetchDataFromServer(
                     </div>
 
                     <div class="title-wrapper">
-                        <h3 class="title-large">Trailer and Clips</h3>
+                        <h3 class="title-large">Trailers</h3>
                     </div>
 
                     <div class="slider-list">
@@ -134,7 +134,7 @@ fetchDataFromServer(
         pageContent.appendChild(movieDetail)
         
         fetchDataFromServer(
-            `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${api_key}&page=1`, 
+            `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${api_key}&page=1&language=pt-BR`, 
             addSuggestedMovies
         )
     }
@@ -147,7 +147,7 @@ const addSuggestedMovies = function({results: movieList}, title) {
 
     movieListElem.innerHTML = `
         <div class="title-wrapper">
-            <h3 class="title-large">You May Also Like</h3>
+            <h3 class="title-large">Talvez você goste</h3>
         </div>
 
         <div class="slider-list">
