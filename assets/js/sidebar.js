@@ -6,7 +6,7 @@ export function sidebar() {
     
     const genreList = {}
 
-    fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`, function ({ genres }) {
+    fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}&language=pt-BR`, function ({ genres }) {
         for (const {id, name} of genres) {
             genreList[id] = name;
         }
@@ -19,19 +19,8 @@ export function sidebar() {
 
     sidebarInner.innerHTML = `
         <div class="sidebar-list">
-            <p class="title">Genre</p>
+            <p class="title">Gêneros</p>
          </div>
-
-        <div class="sidebar-list">
-            <p class="title">Language</p>
-            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=en", "English")'>English</a>
-            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=es", "Spanish")'>Spanish</a>
-            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=fr", "French")'>French</a>
-            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=de", "German")'>German</a>
-            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=pt", "Brazilian")'>Brazilian</a>
-            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ja", "Japanese")'>Japanese</a>
-            <a href="/movie-list.html" menu-close class="sidebar-link" onclick='getMovieList("with_original_language=ko", "Korean")'>Korean</a>
-        </div>
 
         <div class="sidebar-footer">
         <p class="copyright">Copyright 2024</p>
