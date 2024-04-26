@@ -27,3 +27,6 @@ Este projeto foi inspirado pelo trabalho de [codewithsadee](https://www.youtube.
 - Javascript Puro
 - Postman
 - TMDB API
+
+## Licença
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
