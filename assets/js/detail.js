@@ -93,7 +93,7 @@ fetchDataFromServer(
 
                             <ul class="details-list">
                                 <div class="list-item">
-                                    <p class="list-name">Estrelando</p>
+                                    <p class="list-name">Estrelado por</p>
 
                                     <p>${getCasts(cast)}</p>
                                 </div>
